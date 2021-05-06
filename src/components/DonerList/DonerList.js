@@ -9,7 +9,7 @@ const DonerList = () => {
    
 
     useEffect(() => {
-        fetch('http://localhost:5000/doner?blood='+formData)
+        fetch('https://life-family-server.herokuapp.com/doner?blood='+formData)
             .then(res => res.json())
             .then(data => {
 
