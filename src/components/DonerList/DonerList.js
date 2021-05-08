@@ -13,7 +13,7 @@ const DonerList = () => {
             .then(res => res.json())
             .then(data => {
 
-                setDoners(data)
+                setDoners(data.reverse());
 
             })
     }, [formData])

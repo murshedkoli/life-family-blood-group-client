@@ -42,7 +42,7 @@ const Form = () => {
         })
         .then(res => res.json())
         .then(data=> {
-            if(data.insertedCount){
+            if(data>0){
                 alert('Your Registration Succefully Complete')
                 history.push('/')
 
@@ -62,19 +62,15 @@ const Form = () => {
             <h5 style={{ textAlign: 'center' }}>Doner Registration Page</h5>
             <form onSubmit={formOnSubmit}>
                 <div className="mb-3">
-                    <label htmlFor="name" className="form-label">Doner Name</label>
                     <input onBlur={handleOnBlur} type="text" className="form-control" id="name" name="name" placeholder="Full Name of Doner" required />
                 </div>
                 <div className="mb-3">
-                    <label htmlFor="address" className="form-label">Address</label>
-                    <input onBlur={handleOnBlur} type="text" className="form-control" id="address" name="address" placeholder="Expmle: Kalikaccha, Sarail, Brahmanbaria" required />
+                    <input onBlur={handleOnBlur} type="text" className="form-control" id="address" name="address" placeholder="Address: Kalikaccha, Sarail, Brahmanbaria" required />
                 </div>
                 <div className="mb-3">
-                    <label htmlFor="phone" className="form-label">Phone Number</label>
-                    <input onBlur={handleOnBlur} type="number" className="form-control" id="phone" name="phone" placeholder="Expmle: 017819814...." required />
+                    <input onBlur={handleOnBlur} type="number" className="form-control" id="phone" name="phone" placeholder="Phone Number: 017819814...." required />
                 </div>
                 <div className="mb-3">
-                    <label htmlFor="blood" className="form-label">Your Blood Group</label>
                     <select onBlur={handleOnBlur} class="form-select" id="blood" name="blood" required>
                         <option selected>Select Your Blood Group</option>
                         <option value="A+">A+</option>
@@ -97,7 +93,7 @@ const Form = () => {
                     <button  class="btn btn-primary" type="button">Submit</button>
                   
                 </div> */}
-                <input type="submit" value="Submit"/>
+                <input className="btn btn-success" style={{width:'100%',}} type="submit" value="Submit"/>
 
             </form>
         </div>
