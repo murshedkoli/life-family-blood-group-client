@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CardBody = ({doners, formData}) => {
+const CardBody = ({doners}) => {
     return (
         <div class="row">
         <div class="col-xl-3 col-md-6">

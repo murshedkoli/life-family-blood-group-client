@@ -32,7 +32,7 @@ const DonerList = () => {
 
     return (
         <div className="mt-3">
-               <CardBody doners={doners} formData={formData}/>
+               <CardBody doners={doners} />
 
             <div className="mt-3">
                 <select onChange={handleOnBlur} class="form-select" id="blood" name="blood" required>
@@ -63,7 +63,7 @@ const DonerList = () => {
                </div>
            </div>
            
-           ): <div style={{display:'flex',justifyContent:'center', }}><img style={{marginTop:'100px', }} src={loading} alt="loading img"></img></div>
+           ): <div style={{display:'flex',justifyContent:'center'}}><img style={{marginTop:'100px', }} src={loading} alt="loading img"></img></div>
             }
         </div>
     );
