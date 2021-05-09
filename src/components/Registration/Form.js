@@ -3,6 +3,7 @@ import { useState } from 'react';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { useHistory } from 'react-router';
+import swal from 'sweetalert';
 
 
 
@@ -33,8 +34,9 @@ const Form = () => {
             lastDate:startDate
 
         }
+        //https://life-family-server.herokuapp.com
 
-        fetch('https://life-family-server.herokuapp.com/adddoner',{
+        fetch('http://localhost:5000/adddoner',{
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(formDataForSubmit)
@@ -42,12 +44,13 @@ const Form = () => {
         })
         .then(res => res.json())
         .then(data=> {
-            if(data>0){
-                alert('Your Registration Succefully Complete')
+            if(data.insertedCount>0){
+                
+                swal("Congratulations!", "You are Successfully Registered!", "success");
                 history.push('/')
 
             }else{
-                alert('Your Registration Unsuccessfull')
+                swal("Ohhh!", "You are already registered!", "warning");
                 
             }
         })

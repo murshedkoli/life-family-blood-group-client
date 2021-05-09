@@ -45,7 +45,7 @@ const DonerList = () => {
                 </select>
             </div>
             {
-                doners.map(doner => <div class="card">
+                doners.map(doner => <div  class="card mt-3">
                     <div class="card-header">
                         Blood Group : {doner.blood}
                     </div>
@@ -58,7 +58,9 @@ const DonerList = () => {
                         <a href={`tel:${doner.phone}`} className="btn btn-success col-md-6 col-sm-12">CALL <br /> <small>{doner.name}</small></a>
 
                     </div>
-                </div>)
+                </div>
+                
+                )
             }
         </div>
     );
