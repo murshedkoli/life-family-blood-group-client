@@ -4,7 +4,7 @@ import Heder from '../Header/Heder';
 
 const Home = () => {
     return (
-       <div> <Heder/>
+       <div style={{backgroundColor:'#172b4d'}}> <Heder/>
        <DonerList/></div>
     );
 };

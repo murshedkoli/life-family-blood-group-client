@@ -34,9 +34,9 @@ const Form = () => {
             lastDate:startDate
 
         }
-        //https://life-family-server.herokuapp.com
+        
 
-        fetch('http://localhost:5000/adddoner',{
+        fetch('https://life-family-server.herokuapp.com/adddoner',{
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(formDataForSubmit)

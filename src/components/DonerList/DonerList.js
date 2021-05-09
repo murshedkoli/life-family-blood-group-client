@@ -28,12 +28,11 @@ const DonerList = () => {
 
 
     return (
-        <div>
+        <div className="container">
 
-            <div className="mb-3">
-                <label htmlFor="blood" className="form-label">Select Blood Group</label>
+            <div className="mt-3">
                 <select onChange={handleOnBlur} class="form-select" id="blood" name="blood" required>
-                    <option value=" " selected>Select Blood Group</option>
+                    <option value=" " selected>Search with blood group</option>
                     <option value="A+">A+</option>
                     <option value="A-">A-</option>
                     <option value="B+">B+</option>
