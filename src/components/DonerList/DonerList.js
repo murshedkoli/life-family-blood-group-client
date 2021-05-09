@@ -1,6 +1,7 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
+import CardBody from '../CardBody';
 
 const DonerList = () => {
     const [formData, setFormData] = useState('');
@@ -28,7 +29,8 @@ const DonerList = () => {
 
 
     return (
-        <div className="container">
+        <div className="mt-3">
+               <CardBody doners={doners} />
 
             <div className="mt-3">
                 <select onChange={handleOnBlur} class="form-select" id="blood" name="blood" required>
