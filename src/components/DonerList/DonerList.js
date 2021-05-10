@@ -60,12 +60,6 @@ const DonerList = () => {
                             <p class="card-text">Last Donate Date: {new Date(doner.lastDate).toDateString()}</p>
                         </div>
                         <a href={`tel:${doner.phone}`} className="btn btn-success col-md-6 col-sm-12">CALL <br /> <small>{doner.name}</small></a>
-                   <div className="col-md-6 col-sm-12" >
-                       <h5 class="card-title">{doner.name}</h5>
-                       <p class="card-text">Last Donate Date: {new Date(doner.lastDate).toDateString()}</p>
-                   </div>
-                   <a href={`tel:${doner.phone}`} className="btn btn-success col-md-6 col-sm-12">CALL <br /> <small>{doner.name}</small></a>
-
                </div>
            </div>
            
