@@ -29,7 +29,7 @@ const DonerForHome = ({doner}) => {
                             <p class="card-text">Last Donate Date: {new Date(doner.lastDate).toDateString()}</p>
                         </div>
                        {
-                           days<0 ? <a  href="/" className="btn btn-success col-md-6 col-sm-12">Not Available Now </a>: <a href={`tel:${doner.phone}`} className="btn btn-success col-md-6 col-sm-12">Call <br /> <small>{doner.name}</small></a>
+                           days<0 ? <a  href="/" className="btn btn-danger col-md-6">Not Available Now </a>: <a href={`tel:${doner.phone}`} className="btn btn-success col-md-6 col-sm-12">Call <br /> <small>{doner.name}</small></a>
                        }
                     </div>
                     <Card.Footer className="text-muted"> <Countdown date={doner.lastDate} doner={doner} /> </Card.Footer>

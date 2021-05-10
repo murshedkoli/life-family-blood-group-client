@@ -29,7 +29,6 @@ const SignleDoner = () => {
     const diffTime =  today.getTime()-donerDate.getTime();
     const diffDays = diffTime / (1000*3600*24);
     const days = Math.floor(diffDays) -90
-    const available = 90- Math.floor(diffDays)
 
 
 
