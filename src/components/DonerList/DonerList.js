@@ -1,6 +1,7 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import CardBody from '../CardBody';
 
 const DonerList = () => {
@@ -35,13 +36,13 @@ const DonerList = () => {
             <div className="mt-3">
                 <select onChange={handleOnBlur} class="form-select" id="blood" name="blood" required>
                     <option value=" " selected>Search with blood group</option>
-                    <option value="A+">A+</option>
+                    <option value="A%2B">A+</option>
                     <option value="A-">A-</option>
-                    <option value="B+">B+</option>
+                    <option value="B%2B">B+</option>
                     <option value="B-">B-</option>
-                    <option value="O+">O+</option>
+                    <option value="O%2B">O+</option>
                     <option value="O-">O-</option>
-                    <option value="AB+">AB+</option>
+                    <option value="AB%2B">AB+</option>
                     <option value="AB-">AB-</option>
                 </select>
             </div>
@@ -53,7 +54,7 @@ const DonerList = () => {
                     <div class="row card-body d-flex">
 
                         <div className="col-md-6 col-sm-12" >
-                            <h5 class="card-title">{doner.name}</h5>
+                            <Link to={`singleDoner/${doner._id}`}><h5 class="card-title">{doner.name}</h5></Link>
                             <p class="card-text">Last Donate Date: {new Date(doner.lastDate).toDateString()}</p>
                         </div>
                         <a href={`tel:${doner.phone}`} className="btn btn-success col-md-6 col-sm-12">CALL <br /> <small>{doner.name}</small></a>
