@@ -6,6 +6,9 @@ import loading from '../../photos/loading.gif'
 import DonerForHome from './DonerForHome';
 
 const DonerList = () => {
+
+    
+    document.title ="Home Page | Life Family Blood Donation Group"
     const [formData, setFormData] = useState('');
 
     const [doners, setDoners] = useState([]);

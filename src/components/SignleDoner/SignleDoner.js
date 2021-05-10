@@ -11,6 +11,9 @@ const SignleDoner = () => {
     const [doner, setDoner] = useState([]);
 
 
+    
+    document.title =`${doner.name} | Life Family Blood Donation Group`
+
     // https://life-family-server.herokuapp.com
 
     useEffect(() => {
