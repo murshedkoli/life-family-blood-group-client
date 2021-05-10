@@ -41,11 +41,7 @@ const DonerList = () => {
                     <option value="A%2B">A+</option>
                     <option value="A-">A-</option>
                     <option value="B%2B">B+</option>
-<<<<<<< HEAD
                     <option value="B-">B-</option>
-=======
-                    <option value="B%2B">B-</option>
->>>>>>> b6e6638224b2640850e83890b10c4217d7570180
                     <option value="O%2B">O+</option>
                     <option value="O-">O-</option>
                     <option value="AB%2B">AB+</option>
@@ -59,19 +55,16 @@ const DonerList = () => {
                </div>
                <div class="row card-body d-flex">
 
-<<<<<<< HEAD
                         <div className="col-md-6 col-sm-12" >
                             <Link to={`singleDoner/${doner._id}`}><h5 class="card-title">{doner.name}</h5></Link>
                             <p class="card-text">Last Donate Date: {new Date(doner.lastDate).toDateString()}</p>
                         </div>
                         <a href={`tel:${doner.phone}`} className="btn btn-success col-md-6 col-sm-12">CALL <br /> <small>{doner.name}</small></a>
-=======
                    <div className="col-md-6 col-sm-12" >
                        <h5 class="card-title">{doner.name}</h5>
                        <p class="card-text">Last Donate Date: {new Date(doner.lastDate).toDateString()}</p>
                    </div>
                    <a href={`tel:${doner.phone}`} className="btn btn-success col-md-6 col-sm-12">CALL <br /> <small>{doner.name}</small></a>
->>>>>>> b6e6638224b2640850e83890b10c4217d7570180
 
                </div>
            </div>
