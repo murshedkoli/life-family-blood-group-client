@@ -14,7 +14,7 @@ const SignleDoner = () => {
     // https://life-family-server.herokuapp.com
 
     useEffect(() => {
-        fetch('http://localhost:5000/singledoner?id=' + id)
+        fetch('https://life-family-server.herokuapp.com/singledoner?id=' + id)
             .then(res => res.json())
             .then(data => {
 
