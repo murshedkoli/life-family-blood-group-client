@@ -12,7 +12,6 @@ const DonerForHome = ({doner}) => {
     const diffTime =  today.getTime()-donerDate.getTime();
     const diffDays = diffTime / (1000*3600*24);
     const days = Math.floor(diffDays) -90
-    const available = 90- Math.floor(diffDays)
 
 
 
@@ -25,7 +24,7 @@ const DonerForHome = ({doner}) => {
                     <div class="row card-body d-flex">
 
                         <div className="col-md-6 col-sm-12" >
-                            <Link to={`singleDoner/${doner._id}`}><h5 class="card-title">{doner.name}</h5></Link>
+                            <Link style={{color:'black', fontWeight:'bold', textDecoration:'none'}}  to={`singleDoner/${doner._id}`}><h5  class="card-title">{doner.name}</h5></Link>
                             <p class="card-text">Last Donate Date: {new Date(doner.lastDate).toDateString()}</p>
                         </div>
                        {
