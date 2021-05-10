@@ -1,19 +1,19 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
 import CardBody from '../CardBody';
 import loading from '../../photos/loading.gif'
+import DonerForHome from './DonerForHome';
 
 const DonerList = () => {
     const [formData, setFormData] = useState('');
 
     const [doners, setDoners] = useState([]);
-   
-//http://localhost:5000
-//https://life-family-server.herokuapp.com
+
+    //http://localhost:5000
+    //https://life-family-server.herokuapp.com
     useEffect(() => {
-        fetch('https://life-family-server.herokuapp.com/doner?blood='+formData)
+        fetch('https://life-family-server.herokuapp.com/doner?blood=' + formData)
             .then(res => res.json())
             .then(data => {
 
@@ -22,18 +22,20 @@ const DonerList = () => {
             })
     }, [formData])
 
-    
 
-    const handleOnBlur =e=>{
-       
-       setFormData(e.target.value);
- 
+
+    const handleOnBlur = e => {
+
+        setFormData(e.target.value);
+
     }
+
+
 
 
     return (
         <div className="mt-3">
-               <CardBody doners={doners} />
+            <CardBody doners={doners} />
 
             <div className="mt-3">
                 <select onChange={handleOnBlur} class="form-select" id="blood" name="blood" required>
@@ -49,21 +51,9 @@ const DonerList = () => {
                 </select>
             </div>
             {
-               doners.length? doners.map(doner => <div  class="card mt-3">
-               <div class="card-header">
-                   Blood Group : {doner.blood}
-               </div>
-               <div class="row card-body d-flex">
+                doners.length ? doners.map(doner => <DonerForHome doner={doner} />
 
-                        <div className="col-md-6 col-sm-12" >
-                            <Link to={`singleDoner/${doner._id}`}><h5 class="card-title">{doner.name}</h5></Link>
-                            <p class="card-text">Last Donate Date: {new Date(doner.lastDate).toDateString()}</p>
-                        </div>
-                        <a href={`tel:${doner.phone}`} className="btn btn-success col-md-6 col-sm-12">CALL <br /> <small>{doner.name}</small></a>
-               </div>
-           </div>
-           
-           ): <div style={{display:'flex',justifyContent:'center'}}><img style={{marginTop:'100px', }} src={loading} alt="loading img"></img></div>
+                ) : <div style={{ display: 'flex', justifyContent: 'center' }}><img style={{ marginTop: '100px', }} src={loading} alt="loading img"></img></div>
             }
         </div>
     );

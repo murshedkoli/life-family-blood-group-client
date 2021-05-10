@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Button, Card } from 'react-bootstrap';
+import {  Card } from 'react-bootstrap';
 import { useParams } from 'react-router';
 import Heder from '../Header/Heder';
 import Countdown from '../Countdown';
@@ -23,7 +23,13 @@ const SignleDoner = () => {
             })
     }, [id])
 
-
+    const donerDate = new Date(doner.lastDate);
+    const today = new Date();
+  
+    const diffTime =  today.getTime()-donerDate.getTime();
+    const diffDays = diffTime / (1000*3600*24);
+    const days = Math.floor(diffDays) -90
+    const available = 90- Math.floor(diffDays)
 
 
 
@@ -38,7 +44,7 @@ const SignleDoner = () => {
                             <Card.Text>
                                 Address : {doner.address}
                             </Card.Text>
-                            <a href={`tel:${doner.phone}`} className="btn btn-outline-success">Call For Help</a>
+                            {days >0 && <a href={`tel:${doner.phone}`} className="btn btn-outline-success">Call For Help</a>}
                         </Card.Body>
                         <Card.Footer className="text-muted"> <Countdown date={doner.lastDate} doner={doner} /> </Card.Footer>
                     </Card>
