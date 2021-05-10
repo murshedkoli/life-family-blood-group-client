@@ -8,8 +8,9 @@ const Heder = () => {
         <header >
             <h5 style={{textAlign:'center', color:'white'}}>Life Family</h5>
         <div className="navbar-custom">
-        <Link to="/" className="menu-item">Doner</Link>
-          <Link to="/registration" className="menu-item">Registration</Link>
+        <Link to="/" className="menu-item">রক্ত দাতা</Link>
+          <Link to="/registration" className="menu-item"> সদস্য নিবন্ধন </Link>
+          <Link to="/info" className="menu-item"> তথ্য </Link>
         </div>
         </header>
     );

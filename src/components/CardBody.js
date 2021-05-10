@@ -1,30 +1,15 @@
 import React from 'react';
+import SingleInfoCard from './SingleInfoCard';
 
 const CardBody = ({doners}) => {
+
+
+
     return (
         <div class="row">
-        <div class="col-xl-3 col-md-6">
-          <div class="card card-stats">
-            
-            <div class="card-body">
-              <div class="row">
-                <div class="col">
-                  <h5 class="card-title text-uppercase text-muted mb-0"> Registered  <span>Total</span></h5>
-                  <span class="h2 font-weight-bold mb-0">{doners.length}</span>
-                </div>
-                <div class="col-auto">
-                  <div class="icon icon-shape bg-gradient-red text-white rounded-circle shadow">
-                    <i class="ni ni-active-40"></i>
-                  </div>
-                </div>
-              </div>
-              <p class="mt-3 mb-0 text-sm">
-                <span class="text-success mr-2"><i class="fa fa-arrow-up"></i> </span>
-                <span class="text-nowrap">Total Registered</span>
-              </p>
-            </div>
-          </div>
-        </div>
+        
+
+        <SingleInfoCard heading={'নিবন্ধিত সদস্য'} number={doners.length} footer={"সর্বমোট নিবন্ধিত"}/>
             
         </div>
     );

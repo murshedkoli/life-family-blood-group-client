@@ -42,7 +42,7 @@ const DonerList = () => {
 
             <div className="mt-3">
                 <select onChange={handleOnBlur} class="form-select" id="blood" name="blood" required>
-                    <option value=" " selected>Search with blood group</option>
+                    <option value=" " selected> রক্তের গ্রুপ দিয়ে খুজুন </option>
                     <option value="A%2B">A+</option>
                     <option value="A-">A-</option>
                     <option value="B%2B">B+</option>

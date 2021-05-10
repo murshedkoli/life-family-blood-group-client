@@ -9,6 +9,7 @@ import {
 import Home from './components/Home/Home';
 import Registration from './components/Registration/Registration';
 import SignleDoner from './components/SignleDoner/SignleDoner';
+import DonateInfo from './components/DonateInfo';
 
 function App() {
   return (
@@ -23,6 +24,9 @@ function App() {
           </Route>
           <Route path="/singleDoner/:id">
             <SignleDoner/>
+          </Route>
+          <Route path="/info">
+            <DonateInfo/>
           </Route>
 
         </Switch>

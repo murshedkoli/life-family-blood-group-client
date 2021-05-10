@@ -1,3 +1,5 @@
+@import url('https://fonts.maateen.me/adorsho-lipi/font.css');
+
 .App {
   text-align: center;
 }
@@ -35,4 +37,8 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+body {
+  font-family: 'AdorshoLipi', Arial, sans-serif !important;
 }

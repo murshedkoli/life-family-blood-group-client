@@ -19,16 +19,16 @@ const DonerForHome = ({doner}) => {
         <div>
             <div class="card mt-3">
                     <div class="card-header">
-                        Blood Group : {doner.blood}
+                        রক্তের গ্রুপ : {doner.blood}
                     </div>
                     <div class="row card-body d-flex">
 
                         <div className="col-md-6 col-sm-12" >
                             <Link style={{color:'black', fontWeight:'bold', textDecoration:'none'}}  to={`singleDoner/${doner._id}`}><h5  class="card-title">{doner.name}</h5></Link>
-                            <p class="card-text">Last Donate Date: {new Date(doner.lastDate).toDateString()}</p>
+                            <p class="card-text"> সর্বশেষ রক্ত দিয়েছেন : {new Date(doner.lastDate).toDateString()}</p>
                         </div>
                        {
-                           days<0 ? <a  href="/" className="btn btn-danger col-md-6">Not Available Now </a>: <a href={`tel:${doner.phone}`} className="btn btn-success col-md-6 col-sm-12">Call <br /> <small>{doner.name}</small></a>
+                           days<0 ? <a  href="/" className="btn btn-danger col-md-6"> এখনো সময় হয়নি </a>: <a href={`tel:${doner.phone}`} className="btn btn-success col-md-6 col-sm-12"> <small>{doner.name} কে</small><br /> কল করুন </a>
                        }
                     </div>
                     <Card.Footer className="text-muted"> <Countdown date={doner.lastDate} doner={doner} /> </Card.Footer>

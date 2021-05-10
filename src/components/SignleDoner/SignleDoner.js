@@ -40,13 +40,13 @@ const SignleDoner = () => {
             <div style={{ backgroundColor: '#172b4d', minHeight: '100vh' }}> <Heder />
                 <div className="container mt-5">
                     <Card className="text-center">
-                        <Card.Header>Blood Group: {doner.blood}</Card.Header>
+                        <Card.Header>রক্তের গ্রুপ: {doner.blood}</Card.Header>
                         <Card.Body>
                             <Card.Title>{doner.name}</Card.Title>
                             <Card.Text>
                                 Address : {doner.address}
                             </Card.Text>
-                            {days >0 && <a href={`tel:${doner.phone}`} className="btn btn-outline-success">Call For Help</a>}
+                            {days >0 && <a href={`tel:${doner.phone}`} className="btn btn-outline-success">এখনই কল করুন</a>}
                         </Card.Body>
                         <Card.Footer className="text-muted"> <Countdown date={doner.lastDate} doner={doner} /> </Card.Footer>
                     </Card>
