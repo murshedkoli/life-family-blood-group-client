@@ -19,7 +19,7 @@ const SingleInfoCard = ({heading, number, footer}) => {
               </div>
               <p class="mt-3 mb-0 text-sm">
                 <span class="text-success mr-2"><i class="fa fa-arrow-up"></i> </span>
-                <span > {footer} </span>
+                <span className="text-muted"> {footer} </span>
               </p>
             </div>
           </div>

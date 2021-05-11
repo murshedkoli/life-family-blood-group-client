@@ -10,6 +10,9 @@ import Home from './components/Home/Home';
 import Registration from './components/Registration/Registration';
 import SignleDoner from './components/SignleDoner/SignleDoner';
 import DonateInfo from './components/DonateInfo';
+import Login from './components/Admin/Login';
+import PrivateRoute from './components/Admin/PrivateRoute';
+import Adminpan from './components/Admin/Adminpan';
 
 function App() {
   return (
@@ -28,6 +31,12 @@ function App() {
           <Route path="/info">
             <DonateInfo/>
           </Route>
+          <Route path="/login">
+          <Login/>
+          </Route>
+          <PrivateRoute path="/admin">
+            <Adminpan/>
+          </PrivateRoute>
 
         </Switch>
       </Router>
