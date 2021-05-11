@@ -24,7 +24,7 @@ const DonerForHome = ({doner}) => {
                     <div class="row card-body d-flex">
 
                         <div className="col-md-6 col-sm-12" >
-                            <Link style={{color:'black', fontWeight:'bold', textDecoration:'none'}}  to={`singleDoner/${doner._id}`}><h5  class="card-title">{doner.name}</h5></Link>
+                            <Link style={{color:'black', fontWeight:'bold', textDecoration:'none'}}  to={`singleDoner/${doner._id}`}><h5 style={{textTransform:'capitalize'}} class="card-title">{doner.name}</h5></Link>
                             <p class="card-text"> সর্বশেষ রক্ত দিয়েছেন : {new Date(doner.lastDate).toDateString()}</p>
                         </div>
                        {

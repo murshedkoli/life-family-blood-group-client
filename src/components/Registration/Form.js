@@ -27,7 +27,7 @@ const Form = () => {
 
     const formOnSubmit = e =>{
         const formDataForSubmit ={
-            name:formData.name,
+            name:formData.name.toLowerCase(),
             address:formData.address,
             phone:formData.phone,
             blood:formData.blood,
@@ -46,11 +46,11 @@ const Form = () => {
         .then(data=> {
             if(data.insertedCount>0){
                 
-                swal("Congratulations!", "You are Successfully Registered!", "success");
+                swal("স্বাগতম!", "আপনি সফল ভাবে নিবন্ধিত হয়েছেন", "success");
                 history.push('/')
 
             }else{
-                swal("Ohhh!", "You are already registered!", "warning");
+                swal("দুঃখিত!", "আপনি  ইতি মধ্যে নিবন্ধিত হয়ে গেছেন!", "warning");
                 
             }
         })

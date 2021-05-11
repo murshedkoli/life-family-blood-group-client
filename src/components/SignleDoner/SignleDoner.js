@@ -42,7 +42,7 @@ const SignleDoner = () => {
                     <Card className="text-center">
                         <Card.Header>রক্তের গ্রুপ: {doner.blood}</Card.Header>
                         <Card.Body>
-                            <Card.Title>{doner.name}</Card.Title>
+                            <Card.Title style={{textTransform:'capitalize'}}>{doner.name}</Card.Title>
                             <Card.Text>
                                 Address : {doner.address}
                             </Card.Text>

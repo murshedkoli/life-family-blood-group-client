@@ -15,7 +15,7 @@ const Adminpan = () => {
     //http://localhost:5000
     //https://life-family-server.herokuapp.com
     useEffect(() => {
-        fetch('https://life-family-server.herokuapp.com/doner-search?name=' + formData)
+        fetch('http://localhost:5000/doner-search?name=' + formData)
             .then(res => res.json())
             .then(data => {
 
