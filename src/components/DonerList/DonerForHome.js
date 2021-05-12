@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import Countdown from '../Countdown';
@@ -14,6 +14,12 @@ const DonerForHome = ({doner}) => {
     const days = Math.floor(diffDays) -90
 
 
+    const [user, setUser] = useState({});
+
+    useEffect(() => {
+        const user = JSON.parse(sessionStorage.getItem('user'));
+        setUser(user)
+    }, [])
 
     return (
         <div>
@@ -28,10 +34,11 @@ const DonerForHome = ({doner}) => {
                             <p class="card-text"> সর্বশেষ রক্ত দিয়েছেন : {new Date(doner.lastDate).toDateString()}</p>
                         </div>
                        {
-                           days<0 ? <a  href="/" className="btn btn-danger col-md-6"> এখনো সময় হয়নি </a>: <a href={`tel:${doner.phone}`} className="btn btn-success col-md-6 col-sm-12"> <small>{doner.name} কে</small><br /> কল করুন </a>
+                           days<0 ? <a  href="/" className="btn btn-danger col-md-6"> এখনো সময় হয়নি </a>: user && <a href={`tel:${doner.phone}`} className="btn btn-success col-md-6 col-sm-12"> <small>{doner.name} কে</small><br /> কল করুন </a>
                        }
                     </div>
                     <Card.Footer className="text-muted"> <Countdown date={doner.lastDate} doner={doner} /> </Card.Footer>
+                    
                 </div>
         </div>
     );

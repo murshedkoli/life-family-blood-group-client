@@ -13,11 +13,13 @@ import DonateInfo from './components/DonateInfo';
 import Login from './components/Admin/Login';
 import PrivateRoute from './components/Admin/PrivateRoute';
 import Adminpan from './components/Admin/Adminpan';
+import Heder from './components/Header/Heder';
 
 function App() {
   return (
     <div  style={{ backgroundColor: '#172b4d', minHeight:'100vh' }}>
       <Router>
+        <Heder/>
         <Switch>
           <Route exact path="/">
             <Home/>

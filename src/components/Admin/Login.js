@@ -1,12 +1,9 @@
 import React, { useState } from 'react';
-import { useHistory, useLocation } from 'react-router';
-import Heder from '../Header/Heder';
+import { useHistory } from 'react-router';
 
 const Login = () => {
 
     let history = useHistory();
-    let location = useLocation();
-    let { from } = location.state || { from: { pathname: "/admin" } };
 
 
     const [formData, setFormData] = useState({});
@@ -23,8 +20,7 @@ const Login = () => {
             const user = {name: 'afzal', role:'admin'}
 
             sessionStorage.setItem('user', JSON.stringify(user))
-            history.replace(from);
-
+            history.push('/admin')
         } else {
             alert('you are not admin')
         }
@@ -33,9 +29,7 @@ const Login = () => {
 
     return (
         <div>
-            <Heder />
-
-
+           
             <div className="container d-flex justify-content-center align-item-center">
                 <form style={{ marginTop: '100px' }} onSubmit={onSubmit}>
                     <div className="mb-3">

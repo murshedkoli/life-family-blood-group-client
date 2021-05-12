@@ -5,7 +5,6 @@ function PrivateRoute({ children, ...rest }) {
 
 
     const [user, setUser] = useState({});
-    console.log(user)
 
     useEffect(() => {
         const user = JSON.parse(sessionStorage.getItem('user'));
