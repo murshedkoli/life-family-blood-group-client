@@ -1,18 +1,34 @@
-.navbar-custom{
-    background-color: red;
-    display: flex;
-}
-.menu-item{
-    color: aliceblue;
-    padding: 10px;
-    width: 50%;
-    text-align: center;
-    cursor: pointer;
-    text-decoration: none;
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .desktop-menu{
+        display: none;
+    }
 }
 
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .mobile-menu{
+        display: none;
+    }
+}
 
-.menu-item:hover{
-    background-color: green;
-   
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .mobile-menu{
+        display: none;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .mobile-menu{
+        display: none;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .mobile-menu{
+        display: none;
+    }
 }

@@ -10,11 +10,16 @@ import Home from './components/Home/Home';
 import Registration from './components/Registration/Registration';
 import SignleDoner from './components/SignleDoner/SignleDoner';
 import DonateInfo from './components/DonateInfo';
+import Login from './components/Admin/Login';
+import PrivateRoute from './components/Admin/PrivateRoute';
+import Adminpan from './components/Admin/Adminpan';
+import Heder from './components/Header/Heder';
 
 function App() {
   return (
     <div  >
       <Router>
+        <Heder/>
         <Switch>
           <Route exact path="/">
             <Home/>
@@ -28,6 +33,12 @@ function App() {
           <Route path="/info">
             <DonateInfo/>
           </Route>
+          <Route path="/login">
+          <Login/>
+          </Route>
+          <PrivateRoute path="/admin">
+            <Adminpan/>
+          </PrivateRoute>
 
         </Switch>
       </Router>

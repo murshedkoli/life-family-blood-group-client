@@ -1,11 +1,10 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
-import Heder from './Header/Heder';
 
 const DonateInfo = () => {
     return (
         <div>
-            <div style={{ backgroundColor: '#172b4d', minHeight: '100vh' }}> <Heder />
+            <div style={{ backgroundColor: '#172b4d', minHeight: '100vh' }}> 
                 <div className="container mt-5">
                     <Card className="text-center">
                         <Card.Header>রক্ত দান সম্পর্কে গুরুত্বপূর্ণ কিছু কথা </Card.Header>

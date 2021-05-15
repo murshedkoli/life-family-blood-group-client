@@ -14,7 +14,7 @@ const Countdown = ({date, doner}) => {
 
 
   return (
-    days <0 ?<div style={{backgroundColor:'red', borderRadius:'5px', color:'white', fontWeight:'bold', padding:'10px'}}>{name} আরও {available} দিন পরে রক্ত দিতে পারবেন।</div>: <div style={{backgroundColor:'green', borderRadius:'5px', color:'white', fontWeight:'bold', padding:'10px'}}>{name} আজকে রক্ত দিতে পারবেন। </div>
+    days <0 ?<div style={{backgroundColor:'red', borderRadius:'5px', color:'white', fontWeight:'bold', padding:'10px', textTransform:'capitalize'}}>{name} আরও {available} দিন পরে রক্ত দিতে পারবেন।</div>: <div style={{backgroundColor:'green', borderRadius:'5px', color:'white', fontWeight:'bold', padding:'10px'}}>{name} আজকে রক্ত দিতে পারবেন। </div>
   );
 };
 
