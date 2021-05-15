@@ -2,8 +2,8 @@ import React from 'react';
 
 const SingleInfoCard = ({heading, number, footer}) => {
     return (
-        <div class="col-xl-3 col-md-6">
-          <div class="card card-stats">
+        <div style={{backgroundColor:'rgb(0,128,0)'}} class="col-xl-3 col-md-6">
+          <div style={{backgroundColor:'rgb(0,128,0 )'}} class="card card-stats">
             
             <div class="card-body">
               <div class="row">

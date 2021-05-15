@@ -62,7 +62,7 @@ const Form = () => {
 
     return (
         <div className="container">
-            <h5 style={{ textAlign: 'center' }}>Doner Registration Page</h5>
+            <h5 style={{ textAlign: 'center', color:'#fff' }}>Doner Registration Page</h5>
             <form onSubmit={formOnSubmit}>
                 <div className="mb-3">
                     <input onBlur={handleOnBlur} type="text" className="form-control" id="name" name="name" placeholder="Full Name of Doner" required />
@@ -88,7 +88,7 @@ const Form = () => {
                 </div>
 
                 <div className="mb-3">
-                    <label htmlFor="formGroupExampleInput2" className="form-label">Your Last Donate Date</label> <br />
+                    <label style={{color:'#fff'}} htmlFor="formGroupExampleInput2" className="form-label">সর্বশেষ রক্ত দানের তারিখ</label> <br />
                     <DatePicker selected={startDate} onChange={date => setStartDate(date)} />
 
                 </div>

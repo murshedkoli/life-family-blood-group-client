@@ -13,7 +13,7 @@ import DonateInfo from './components/DonateInfo';
 
 function App() {
   return (
-    <div  style={{ backgroundColor: '#172b4d', minHeight:'100vh' }}>
+    <div  >
       <Router>
         <Switch>
           <Route exact path="/">

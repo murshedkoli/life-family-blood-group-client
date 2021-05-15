@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import {  Card } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 import { useParams } from 'react-router';
 import Heder from '../Header/Heder';
 import Countdown from '../Countdown';
@@ -11,8 +11,8 @@ const SignleDoner = () => {
     const [doner, setDoner] = useState([]);
 
 
-    
-    document.title =`${doner.name} | Life Family Blood Donation Group`
+
+    document.title = `${doner.name} | Life Family Blood Donation Group`
 
     // https://life-family-server.herokuapp.com
 
@@ -28,16 +28,16 @@ const SignleDoner = () => {
 
     const donerDate = new Date(doner.lastDate);
     const today = new Date();
-  
-    const diffTime =  today.getTime()-donerDate.getTime();
-    const diffDays = diffTime / (1000*3600*24);
-    const days = Math.floor(diffDays) -90
+
+    const diffTime = today.getTime() - donerDate.getTime();
+    const diffDays = diffTime / (1000 * 3600 * 24);
+    const days = Math.floor(diffDays) - 90
 
 
 
     return (
-        <div>
-            <div style={{ backgroundColor: '#172b4d', minHeight: '100vh' }}> <Heder />
+        <div style={{ backgroundColor: '#80808080', }}>
+            <div style={{ backgroundColor: '#172b4d', minHeight: '100vh', border: '1px solid black' }}> <Heder />
                 <div className="container mt-5">
                     <Card className="text-center">
                         <Card.Header>রক্তের গ্রুপ: {doner.blood}</Card.Header>
@@ -46,7 +46,7 @@ const SignleDoner = () => {
                             <Card.Text>
                                 Address : {doner.address}
                             </Card.Text>
-                            {days >0 && <a href={`tel:${doner.phone}`} className="btn btn-outline-success">এখনই কল করুন</a>}
+                            {days > 0 && <a href={`tel:${doner.phone}`} className="btn btn-outline-success">এখনই কল করুন</a>}
                         </Card.Body>
                         <Card.Footer className="text-muted"> <Countdown date={doner.lastDate} doner={doner} /> </Card.Footer>
                     </Card>
